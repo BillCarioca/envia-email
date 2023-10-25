@@ -18,7 +18,10 @@ function bodyEmail(name,text){
 function text(){
     // gera o texto automatico que incorpora o corpo do email
     return `Gostariamos de Apresentar uma novidade inportante pra vc
-      chegou em nossa empresa novos carros com preços incríveis.`
+      chegou em nossa empresa novos carros com preços incríveis.
+          Aproveitando para informar a grande aceitação da Nova Kombe 
+      que esta sendo sucesso de vendas, garanta já a sua, bem como as 
+      excelentes condições para aquisição marque já uma visita!`
 }
 function defineDia(dia){
     // pega o dia em texto e retorna o equivalente em numero
