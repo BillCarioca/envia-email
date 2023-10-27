@@ -12,24 +12,24 @@ class Client {
 
 const listaDeClientes = []
 
-function addClient(client){
-    listaDeClientes.push(client)
+function addClient(nome, email,ehNotificada){
+    return listaDeClientes.push(new Client(nome,email,ehNotificada))
 }
 
-addClient(new Client("Ana","ana@ada.com",true))
-addClient(new Client("Bruno","bruno@ada.com",true))
-addClient(new Client("Carlos","carlos@ada.com",false))
-addClient(new Client("Daniel","daniel@ada.com",true))
-addClient(new Client("Eva","eva@ada.com",true))
-addClient(new Client("Fábio","fabio@ada.com",true))
-addClient(new Client("Gabriela","gabriea@ada.com",false))
-addClient(new Client("Hiro","hiro@ada.com",false))
-addClient(new Client("Inês","ines@ada.com",true))
-addClient(new Client("João","joao@ada.com",true))
+addClient("Ana","ana@ada.com",true)
+addClient("Bruno","bruno@ada.com",true)
+addClient("Carlos","carlos@ada.com",false)
+addClient("Daniel","daniel@ada.com",true)
+addClient("Eva","eva@ada.com",true)
+addClient("Fábio","fabio@ada.com",true)
+addClient("Gabriela","gabriea@ada.com",false)
+addClient("Hiro","hiro@ada.com",false)
+addClient("Inês","ines@ada.com",true)
+addClient("João","joao@ada.com",true)
 
 function findAll(){
     return listaDeClientes
 }
 
-
+module.exports = addClient
 module.exports = findAll

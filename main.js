@@ -1,10 +1,9 @@
 const findAll = require("./dados")
-const enviarEmail = require("./envia-email");
-const listaDeClientes = findAll()
+const enviarEmail = require("./envia-email")
 function bodyEmail(name,text){
     // define a saudação a ser usada no corpo do Email dependo da hora do dia.
     const date = new Date
-    const greeting = "Bom dia!"
+    let greeting = "Bom dia!"
     if(date.getHours()>11){
         if(date.getHours()<18) greeting = "Boa Tarde"
         else greeting = "Boa Noite"
@@ -44,6 +43,7 @@ function defineDia(dia){
 function disparoEmail(dia){
     const date = new Date
     const day = defineDia(dia)
+    const listaDeClientes = findAll()
     // dispara os email dependendo do dia .
     if (date.getDay()==day){
         listaDeClientes.forEach(cliente=>{
@@ -57,4 +57,4 @@ function disparoEmail(dia){
     }
 }
 
-disparoEmail("Segunda")
+disparoEmail("sexta")
